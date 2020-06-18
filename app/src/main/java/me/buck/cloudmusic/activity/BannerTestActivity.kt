@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.blankj.utilcode.util.GsonUtils
 import me.buck.cloudmusic.R
 import me.buck.cloudmusic.bean.BannerResult
+import me.buck.cloudmusic.databinding.TestActivityBannerBinding
 import me.buck.cloudmusic.restapi.Api
+import org.youma.util.contentView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -15,6 +17,9 @@ class BannerTestActivity : AppCompatActivity(R.layout.test_activity_banner) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val bind = TestActivityBannerBinding.bind(contentView)
+        bind.imageView.setImageResource(R.drawable.test_banner)
+
 
         val banner = Api.cloudMusic.getBanner()
         banner.enqueue(object : Callback<BannerResult?> {
