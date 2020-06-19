@@ -18,9 +18,10 @@ class BannerTestActivity : AppCompatActivity(R.layout.test_activity_banner) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val bind = TestActivityBannerBinding.bind(contentView)
-        bind.imageView.setImageResource(R.drawable.test_banner)
+//        test1()
+    }
 
-
+    private fun test1() {
         val banner = Api.cloudMusic.getBanner()
         banner.enqueue(object : Callback<BannerResult?> {
             override fun onFailure(call: Call<BannerResult?>, t: Throwable) {
