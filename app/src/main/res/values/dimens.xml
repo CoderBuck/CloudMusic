@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="img_corner_radius">10dp</dimen>
+    <dimen name="img_corner_radius">6dp</dimen>
 
     <!--banner实际充满屏幕宽度，padding 用来控制图片不充满屏幕-->
     <!--banner_indicator_margin_bottom(要覆盖在图片上) > banner_item_padding -->
     <dimen name="banner_item_padding">10dp</dimen>
     <dimen name="banner_indicator_margin_bottom">14dp</dimen>
+    <dimen name="banner_label_text">10sp</dimen>
+    <dimen name="banner_label_padding_v">4dp</dimen>
+    <dimen name="banner_label_padding_h">6dp</dimen>
 </resources>

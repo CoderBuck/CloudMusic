@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="PxUsage"
+    tools:layout_height="420px"
+    tools:layout_weight="1080px">
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:riv_corner_radius="@dimen/img_corner_radius" />
+        app:riv_corner_radius="@dimen/img_corner_radius"
+        tools:src="@drawable/test_banner" />
 
     <TextView
         android:id="@+id/label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:padding="8dp" />
+        android:paddingLeft="@dimen/banner_label_padding_h"
+        android:paddingTop="@dimen/banner_label_padding_v"
+        android:paddingRight="@dimen/banner_label_padding_h"
+        android:paddingBottom="@dimen/banner_label_padding_v"
+        android:textColor="@color/label_text"
+        android:textSize="@dimen/banner_label_text"
+        tools:text="独家" />
 
 </FrameLayout>

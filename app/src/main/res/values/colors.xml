@@ -8,6 +8,13 @@
     <color name="grey_400">#bdbdbd</color>
 
 
+    <color name="label_red">#bdbdbd</color>
+    <color name="label_blue">#bdbdbd</color>
+    <color name="label_text">#FFFFFF</color>
+
+
+
+
     <!-- test -->
-    <color name="test">#A303DAC5</color>
+    <color name="test">#B3E60000</color>
 </resources>

@@ -13,6 +13,21 @@ import me.buck.cloudmusic.bean.Banner
 import me.buck.cloudmusic.bean.item.BannerItem
 import me.relex.circleindicator.CircleIndicator
 
+/**
+ * 指示器配置
+ * @see R.drawable.indicator_grey
+ * @see R.drawable.indicator_red
+ * @see R.animator.indicator
+ * @see R.dimen.banner_indicator_margin_bottom
+ *
+ * ViewPager 配置
+ * @see R.dimen.banner_item_padding
+ * @see R.dimen.img_corner_radius
+ * @see R.dimen.banner_label_text
+ * @see R.dimen.banner_label_padding_v
+ * @see R.dimen.banner_label_padding_h
+ * @see R.color.label_text
+ */
 class BannerView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
