@@ -16,7 +16,10 @@
         android:id="@+id/circle_indicator"
         android:layout_width="wrap_content"
         android:layout_height="10dp"
-        android:layout_marginBottom="4dp"
+        app:ci_animator="@animator/indicator"
+        app:ci_drawable="@drawable/indicator_red"
+        app:ci_drawable_unselected="@drawable/indicator_grey"
+        android:layout_marginBottom="@dimen/banner_indicator_margin_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

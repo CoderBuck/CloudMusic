@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Timber.d("onCreate")
 
-//        startActivity(Intent(this, BannerTestActivity::class.java))
-        startActivity(Intent(this, ImageTestActivity::class.java))
+        startActivity(Intent(this, BannerTestActivity::class.java))
+//        startActivity(Intent(this, ImageTestActivity::class.java))
     }
 }

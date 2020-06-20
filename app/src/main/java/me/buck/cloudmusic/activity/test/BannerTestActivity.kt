@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.blankj.utilcode.util.GsonUtils
 import me.buck.cloudmusic.R
 import me.buck.cloudmusic.bean.BannerResult
+import me.buck.cloudmusic.bean.item.BannerItem
 import me.buck.cloudmusic.databinding.TestActivityBannerBinding
 import me.buck.cloudmusic.restapi.Api
 import org.youma.util.contentView
@@ -13,12 +14,15 @@ import retrofit2.Callback
 import retrofit2.Response
 import timber.log.Timber
 
-class BannerTestActivity : AppCompatActivity(R.layout.test_activity_banner) {
+class BannerTestActivity : AppCompatActivity() {
+
+    private lateinit var bind: TestActivityBannerBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val bind = TestActivityBannerBinding.bind(contentView)
-//        test1()
+        setContentView(R.layout.test_activity_banner)
+        bind = TestActivityBannerBinding.bind(contentView)
+        test1()
     }
 
     private fun test1() {
@@ -26,6 +30,19 @@ class BannerTestActivity : AppCompatActivity(R.layout.test_activity_banner) {
         banner.enqueue(object : Callback<BannerResult?> {
             override fun onFailure(call: Call<BannerResult?>, t: Throwable) {
                 Timber.e(t, "onFailure")
+
+                val bannerItems = listOf(
+                    BannerItem("", "独家"),
+                    BannerItem("", "独家"),
+                    BannerItem("", "独家"),
+                    BannerItem("", "独家"),
+                    BannerItem("", "独家"),
+                    BannerItem("", "独家"),
+                    BannerItem("", "独家")
+                )
+
+                bind.banner.setData(bannerItems)
+
             }
 
             override fun onResponse(call: Call<BannerResult?>, response: Response<BannerResult?>) {

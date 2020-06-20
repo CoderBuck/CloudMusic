@@ -1,10 +1,13 @@
 package me.buck.cloudmusic.view
 
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
-import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
+import androidx.annotation.ColorInt
 import com.makeramen.roundedimageview.RoundedImageView
 import me.buck.cloudmusic.R
 
@@ -17,10 +20,31 @@ class LabelImageView @JvmOverloads constructor(
 
     val image: RoundedImageView
     val label: TextView
+    val shape = GradientDrawable()
+    var radius = 0f
+    var shapeColor: Int = 0
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.customview_label_image_view, this)
+        View.inflate(context, R.layout.customview_label_image_view, this)
         image = findViewById(R.id.image)
         label = findViewById(R.id.label)
+        val radius = resources.getDimension(R.dimen.img_corner_radius)
+        image.cornerRadius = radius
+        shape.cornerRadii = floatArrayOf(
+            radius, radius,
+            0f, 0f,
+            radius, radius,
+            0f, 0f
+        )
+        shape.setColor(Color.parseColor("#D735C86C"))
+        label.background = shape
+    }
+
+    fun setLabelColor(@ColorInt color: Int) {
+        shape.setColor(color)
+    }
+
+    fun setLabelName(name: String) {
+        label.text = name
     }
 }
