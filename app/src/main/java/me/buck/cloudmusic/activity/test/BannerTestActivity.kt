@@ -1,4 +1,4 @@
-package me.buck.cloudmusic.activity
+package me.buck.cloudmusic.activity.test
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

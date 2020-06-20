@@ -38,7 +38,7 @@ class BannerAdapter(val context: Context, val items: List<Banner>) : PagerAdapte
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val inflater = LayoutInflater.from(context)
         val bind = ItemBannerBinding.inflate(LayoutInflater.from(context), container, false)
-        Glide.with(context).load(items[position].url).into(bind.imageView)
+        Glide.with(context).load(items[position].url).into(bind.img)
         container.addView(bind.root)
         return bind.root
     }

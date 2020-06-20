@@ -833,6 +833,13 @@ data class BannerResult(
 )
 
 data class Banner(
+    val pic: String,
+    val url: String?,
+    val song: Song?,
+    val targetId: Int,
+    val targetType: Int,
+    val titleColor: String,
+    val typeTitle: String,
     val adDispatchJson: Any,
     val adLocation: Any,
     val adSource: Any,
@@ -852,19 +859,12 @@ data class Banner(
     val monitorImpress: Any,
     val monitorImpressList: List<Any>,
     val monitorType: Any,
-    val pic: String,
     val pid: Any,
     val program: Any,
     val requestId: String,
     val scm: String,
     val showAdTag: Boolean,
     val showContext: Any,
-    val song: Song,
-    val targetId: Int,
-    val targetType: Int,
-    val titleColor: String,
-    val typeTitle: String,
-    val url: Any,
     val video: Any
 )
 

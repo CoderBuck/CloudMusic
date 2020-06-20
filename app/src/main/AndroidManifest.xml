@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="UnusedAttribute">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +24,8 @@
         </activity>
 
         <!--test-->
-        <activity android:name=".activity.BannerTestActivity" />
+        <activity android:name=".activity.test.BannerTestActivity" />
+        <activity android:name=".activity.test.ImageTestActivity" />
     </application>
 
 </manifest>
