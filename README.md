@@ -3,3 +3,6 @@
 
 ## API
 [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)
+
+
+<a target="_blank" href="https://icons8.cn/icons/set/music">音乐 icon</a> icon by <a target="_blank" href="https://icons8.cn">Icons8</a>
