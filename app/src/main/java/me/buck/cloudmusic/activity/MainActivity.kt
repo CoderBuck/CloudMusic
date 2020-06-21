@@ -16,5 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         startActivity(Intent(this, BannerTestActivity::class.java))
 //        startActivity(Intent(this, ImageTestActivity::class.java))
+
+        finish()
     }
 }
