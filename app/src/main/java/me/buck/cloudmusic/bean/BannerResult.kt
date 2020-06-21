@@ -1,5 +1,7 @@
 package me.buck.cloudmusic.bean
 
+import me.buck.cloudmusic.bean.em.EmTitleColor
+
 /*
 {
   "banners": [
@@ -838,7 +840,7 @@ data class Banner(
     val song: Song?,
     val targetId: Int,
     val targetType: Int,
-    val titleColor: String,
+    val titleColor: EmTitleColor,
     val typeTitle: String,
     val adDispatchJson: Any,
     val adLocation: Any,
@@ -896,7 +898,7 @@ data class Song(
     val pop: Int,
     val privilege: Privilege,
     val pst: Int,
-    val publishTime: Int,
+    val publishTime: Long,
     val rt: String,
     val rtUrl: Any,
     val rtUrls: List<Any>,

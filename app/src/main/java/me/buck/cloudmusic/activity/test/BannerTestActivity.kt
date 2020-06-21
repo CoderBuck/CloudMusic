@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.blankj.utilcode.util.GsonUtils
 import me.buck.cloudmusic.R
 import me.buck.cloudmusic.bean.BannerResult
+import me.buck.cloudmusic.bean.em.EmTitleColor
 import me.buck.cloudmusic.bean.item.BannerItem
 import me.buck.cloudmusic.databinding.TestActivityBannerBinding
 import me.buck.cloudmusic.restapi.Api
@@ -32,13 +33,13 @@ class BannerTestActivity : AppCompatActivity() {
                 Timber.e(t, "onFailure")
 
                 val bannerItems = listOf(
-                    BannerItem("", "独家"),
-                    BannerItem("", "独家"),
-                    BannerItem("", "独家"),
-                    BannerItem("", "独家"),
-                    BannerItem("", "独家"),
-                    BannerItem("", "独家"),
-                    BannerItem("", "独家")
+                    BannerItem("", EmTitleColor.blue, "独家"),
+                    BannerItem("", EmTitleColor.blue, "独家"),
+                    BannerItem("", EmTitleColor.blue, "独家"),
+                    BannerItem("", EmTitleColor.blue, "独家"),
+                    BannerItem("", EmTitleColor.blue, "独家"),
+                    BannerItem("", EmTitleColor.blue, "独家"),
+                    BannerItem("", EmTitleColor.blue, "独家")
                 )
 
                 bind.banner.setData(bannerItems)
@@ -51,6 +52,10 @@ class BannerTestActivity : AppCompatActivity() {
                 if (body != null) {
                     val json = GsonUtils.toJson(body)
                     Timber.d("body = %s", json)
+                    val items = body.banners.map {
+                        BannerItem(it.pic, it.titleColor, it.typeTitle)
+                    }.toList()
+                    bind.banner.setData(items)
                 }
             }
         })

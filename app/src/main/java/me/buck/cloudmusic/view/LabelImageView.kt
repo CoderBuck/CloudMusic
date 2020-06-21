@@ -1,15 +1,16 @@
 package me.buck.cloudmusic.view
 
 import android.content.Context
-import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.annotation.ColorInt
+import com.blankj.utilcode.util.ColorUtils
 import com.makeramen.roundedimageview.RoundedImageView
 import me.buck.cloudmusic.R
+import me.buck.cloudmusic.bean.em.EmTitleColor
 
 /**
  * 包含一张图片和标签（目前右下角）
@@ -36,8 +37,12 @@ class LabelImageView @JvmOverloads constructor(
             radius, radius,
             0f, 0f
         )
-        shape.setColor(Color.parseColor("#D735C86C"))
+        shape.setColor(ColorUtils.getColor(R.color.label_red))
         label.background = shape
+    }
+
+    fun setLabelColor(em: EmTitleColor) {
+        shape.setColor(ColorUtils.getColor(em.colorId))
     }
 
     fun setLabelColor(@ColorInt color: Int) {

@@ -5,12 +5,16 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.PagerAdapter
+import com.blankj.utilcode.util.ReflectUtils
 import com.bumptech.glide.Glide
+import com.kenilt.loopingviewpager.scroller.AutoScroller
 import com.kenilt.loopingviewpager.widget.LoopingViewPager
 import me.buck.cloudmusic.R
-import me.buck.cloudmusic.bean.Banner
 import me.buck.cloudmusic.bean.item.BannerItem
+import me.buck.cloudmusic.tool.FixedSpeedScroller
 import me.relex.circleindicator.CircleIndicator
 
 /**
@@ -36,6 +40,8 @@ class BannerView @JvmOverloads constructor(
     val viewPager: LoopingViewPager
     val indicator: CircleIndicator
     val adapter: BannerAdapter
+    val autoScroller: AutoScroller
+
 
     init {
         View.inflate(context, R.layout.customview_banner_view, this)
@@ -44,6 +50,17 @@ class BannerView @JvmOverloads constructor(
         adapter = BannerAdapter(context, emptyList())
         viewPager.adapter = adapter
         indicator.setViewPager(viewPager)
+        val lifecycle = when (context) {
+            is AppCompatActivity -> context.lifecycle
+            is Fragment -> context.lifecycle
+            else -> throw RuntimeException("no lifecycle")
+        }
+        autoScroller = AutoScroller(viewPager, lifecycle)
+        autoScroller.isAutoScroll = true
+
+        // 修改 viewpager 滚动速度，慢一点
+        // https://stackoverflow.com/a/9731345/6241791
+        ReflectUtils.reflect(viewPager).field("mScroller", FixedSpeedScroller(context))
     }
 
     fun setData(banners: List<BannerItem>) {
@@ -65,6 +82,7 @@ class BannerAdapter(val context: Context, val items: List<BannerItem>) : PagerAd
         } else {
             Glide.with(context).load(R.drawable.test_banner).centerCrop().into(labelImageView.image)
         }
+        labelImageView.setLabelColor(banner.titleColor)
         labelImageView.setLabelName(banner.typeTitle)
         container.addView(view)
         return view
