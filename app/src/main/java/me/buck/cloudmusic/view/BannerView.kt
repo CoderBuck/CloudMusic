@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.PagerAdapter
 import com.blankj.utilcode.util.ReflectUtils
+import com.blankj.utilcode.util.ScreenUtils
 import com.bumptech.glide.Glide
 import com.kenilt.loopingviewpager.scroller.AutoScroller
 import com.kenilt.loopingviewpager.widget.LoopingViewPager
@@ -67,6 +69,17 @@ class BannerView @JvmOverloads constructor(
         val adapter = BannerAdapter(context, banners)
         viewPager.adapter = adapter
         indicator.setViewPager(viewPager)
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        //动态调整下 banner 的高度，要保证内部 banner 图片宽高比 1080:420
+        val bannerWidth = ScreenUtils.getScreenWidth().toFloat()
+        val imageWidth = bannerWidth - resources.getDimension(R.dimen.banner_item_padding) * 2
+        val imageHeight = imageWidth / 1080 * 420
+        val bannerHeight = imageHeight + resources.getDimension(R.dimen.banner_item_padding) * 2
+        val wms = MeasureSpec.makeMeasureSpec(bannerWidth.toInt(), MeasureSpec.EXACTLY)
+        val hms =MeasureSpec.makeMeasureSpec(bannerHeight.toInt(),MeasureSpec.EXACTLY)
+        super.onMeasure(wms, hms)
     }
 
 }
