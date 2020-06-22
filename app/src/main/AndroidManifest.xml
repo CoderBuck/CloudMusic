@@ -25,6 +25,7 @@
         <!--test-->
         <activity android:name=".activity.test.BannerTestActivity" />
         <activity android:name=".activity.test.ImageTestActivity" />
+        <activity android:name=".activity.HomeActivity" />
     </application>
 
 </manifest>

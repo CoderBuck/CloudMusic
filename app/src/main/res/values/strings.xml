@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CloudMusic</string>
+
+    <!--首页tab-->
+    <string name="tab_item_my">我的</string>
+    <string name="tab_item_discovery">发现</string>
+    <string name="tab_item_villain">云村</string>
+    <string name="tab_item_video">视频</string>
 </resources>

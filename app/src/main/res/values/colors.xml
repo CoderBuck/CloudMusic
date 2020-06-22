@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
+
+    <color name="white">#FFFFFF</color>
     <color name="red_400">#EF5350</color>
     <color name="red_600">#e53935</color>
     <color name="grey_400">#BDBDBD</color>
@@ -13,8 +15,6 @@
     <color name="label_red">#CCFB4849</color>
     <color name="label_blue">#CC3290D2</color>
     <color name="label_text">#FFFFFF</color>
-
-
 
 
     <!-- test -->
