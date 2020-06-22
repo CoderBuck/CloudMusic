@@ -19,6 +19,10 @@
     <color name="label_text">#FFFFFF</color>
 
 
+    <color name="tab_select">@color/red_400</color>
+    <color name="tab_normal">@color/grey_400</color>
+
+
     <!-- test -->
     <color name="test">#B3E60000</color>
 </resources>
