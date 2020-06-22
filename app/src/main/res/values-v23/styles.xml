@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme. -->
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -8,7 +9,10 @@
 
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-<!--        <item name="android:windowLightStatusBar">true</item>-->
+        <!--
+        状态栏白底黑字
+        https://stackoverflow.com/a/38383439/6241791
+        -->
+        <item name="android:windowLightStatusBar">true</item>
     </style>
-
 </resources>
