@@ -4,17 +4,17 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import me.buck.cloudmusic.Config
 import me.buck.cloudmusic.R
 import me.buck.cloudmusic.databinding.FragmentDiscoveryBinding
 import me.buck.cloudmusic.viewmodel.DiscoveryViewModel
-import org.youma.util.provideViewModel
 import timber.log.Timber
 
 class DiscoveryFragment : Fragment(R.layout.fragment_discovery) {
 
-    lateinit var model: DiscoveryViewModel
+    private val model: DiscoveryViewModel by viewModels()
 
     companion object {
         fun newInstance() = DiscoveryFragment()
@@ -23,7 +23,6 @@ class DiscoveryFragment : Fragment(R.layout.fragment_discovery) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Timber.d("onCreate")
-        model = provideViewModel(DiscoveryViewModel::class.java)
         model.request()
     }
 

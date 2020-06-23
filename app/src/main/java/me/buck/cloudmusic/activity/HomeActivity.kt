@@ -11,7 +11,6 @@ import me.buck.cloudmusic.R
 import me.buck.cloudmusic.adapter.HomeViewPagerAdapter
 import me.buck.cloudmusic.databinding.ActivityHomeBinding
 import org.youma.util.contentView
-import timber.log.Timber
 
 class HomeActivity : AppCompatActivity() {
 
