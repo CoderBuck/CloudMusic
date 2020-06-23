@@ -5,10 +5,12 @@ import android.view.View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 import android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.updatePadding
+import me.buck.cloudmusic.Config
 import me.buck.cloudmusic.R
 import me.buck.cloudmusic.adapter.HomeViewPagerAdapter
 import me.buck.cloudmusic.databinding.ActivityHomeBinding
 import org.youma.util.contentView
+import timber.log.Timber
 
 class HomeActivity : AppCompatActivity() {
 
@@ -19,8 +21,8 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         bind = ActivityHomeBinding.bind(contentView)
-        homeAdapter = HomeViewPagerAdapter(supportFragmentManager)
         setupInsets()
+        homeAdapter = HomeViewPagerAdapter(supportFragmentManager)
         initView()
     }
 
@@ -33,10 +35,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupInsets() {
+        Timber.d("setupInsets")
         bind.root.systemUiVisibility = SYSTEM_UI_FLAG_LAYOUT_STABLE or SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-        bind.appbar.setOnApplyWindowInsetsListener { v, insets ->
-            v.updatePadding(top = insets.systemWindowInsetTop)
-            insets
-        }
+        bind.appbar.updatePadding(top = Config.statusBarHeight)
     }
 }

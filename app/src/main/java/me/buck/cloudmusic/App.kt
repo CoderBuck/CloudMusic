@@ -1,7 +1,9 @@
 package me.buck.cloudmusic
 
 import android.app.Application
+import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.Utils
+import me.buck.cloudmusic.tool.MyDebugTree
 import timber.log.Timber
 
 class App : Application() {
@@ -9,10 +11,8 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         Utils.init(this)
-        Timber.plant(object : Timber.DebugTree() {
-            override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
-                super.log(priority, "gwf-$tag", message, t)
-            }
-        })
+        Timber.plant(MyDebugTree())
+        Config.statusBarHeight = BarUtils.getStatusBarHeight()
+
     }
 }
