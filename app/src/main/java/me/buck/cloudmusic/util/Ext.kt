@@ -13,9 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
  */
 
 /* Activity */
-val FragmentActivity.contentView: View
-    get() = (findViewById<View>(android.R.id.content) as ViewGroup).getChildAt(0)
-
 
 /* Fragment */
 

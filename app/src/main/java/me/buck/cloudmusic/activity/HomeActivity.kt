@@ -10,17 +10,15 @@ import me.buck.cloudmusic.Config
 import me.buck.cloudmusic.R
 import me.buck.cloudmusic.adapter.HomeViewPagerAdapter
 import me.buck.cloudmusic.databinding.ActivityHomeBinding
-import me.buck.cloudmusic.util.contentView
+import me.buck.cloudmusic.util.delegate.viewBinding
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(R.layout.activity_home) {
 
-    lateinit var bind: ActivityHomeBinding
-    lateinit var homeAdapter: HomeViewPagerAdapter
+    private val bind by viewBinding(ActivityHomeBinding::bind)
+    private lateinit var homeAdapter: HomeViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-        bind = ActivityHomeBinding.bind(contentView)
         setupInsets()
         homeAdapter = HomeViewPagerAdapter(supportFragmentManager)
         initView()

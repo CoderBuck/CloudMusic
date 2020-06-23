@@ -9,11 +9,13 @@ import androidx.lifecycle.Observer
 import me.buck.cloudmusic.Config
 import me.buck.cloudmusic.R
 import me.buck.cloudmusic.databinding.FragmentDiscoveryBinding
+import me.buck.cloudmusic.util.delegate.viewBinding
 import me.buck.cloudmusic.viewmodel.DiscoveryViewModel
 import timber.log.Timber
 
 class DiscoveryFragment : Fragment(R.layout.fragment_discovery) {
 
+    private val bind by viewBinding(FragmentDiscoveryBinding::bind)
     private val model: DiscoveryViewModel by viewModels()
 
     companion object {
@@ -28,8 +30,6 @@ class DiscoveryFragment : Fragment(R.layout.fragment_discovery) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Timber.d("onViewCreated")
-        val bind = FragmentDiscoveryBinding.bind(view)
         bind.root.updatePadding(top = Config.statusBarHeight)
         model.bannerItems.observe(viewLifecycleOwner, Observer {
             bind.banner.setData(it)

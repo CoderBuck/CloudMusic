@@ -9,7 +9,7 @@ import me.buck.cloudmusic.bean.em.EmTitleColor
 import me.buck.cloudmusic.bean.item.BannerItem
 import me.buck.cloudmusic.databinding.TestActivityBannerBinding
 import me.buck.cloudmusic.restapi.Api
-import org.youma.util.contentView
+import me.buck.cloudmusic.util.delegate.contentView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
