@@ -32,16 +32,32 @@ class HomeActivity : AppCompatActivity() {
         bind = ActivityHomeBinding.bind(contentView)
         setupInsets()
         homeAdapter = HomeViewPagerAdapter(supportFragmentManager)
-        initView()
+        bind.viewPager.adapter = homeAdapter
 
-        val textView = TabUtils.getTextView(bind.tabLayout, 0)
-        textView.text
-        Timber.d("textView = %s", textView.text)
+        initView2()
+
+//        val textView = TabUtils.getTextView(bind.tabLayout, 0)
+//        textView.text
+//        Timber.d("textView = %s", textView.text)
 
 
     }
 
-    private fun initView() {
+    private fun initView2() {
+        val tabs = listOf(
+            bind.tabLayout.bind.tab1,
+            bind.tabLayout.bind.tab2,
+            bind.tabLayout.bind.tab3,
+            bind.tabLayout.bind.tab4
+        )
+        val vp = bind.viewPager
+        bind.tabLayout.setupWithViewPager(vp)
+
+
+
+    }
+
+    /*private fun initView() {
         bind.apply {
             viewPager.offscreenPageLimit = 1
             viewPager.adapter = homeAdapter
@@ -200,7 +216,7 @@ class HomeActivity : AppCompatActivity() {
             })
 
         }
-    }
+    }*/
 
     private fun setupInsets() {
         bind.root.systemUiVisibility = SYSTEM_UI_FLAG_LAYOUT_STABLE or SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN

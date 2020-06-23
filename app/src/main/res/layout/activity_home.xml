@@ -49,7 +49,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.tabs.TabLayout
+            <me.buck.cloudmusic.view.HomeTabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--<com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -64,30 +73,30 @@
                 app:tabPaddingEnd="0dp"
                 app:tabPaddingStart="0dp"
                 app:tabPaddingTop="0dp"
-                app:tabRippleColor="@color/transparent">
+                app:tabRippleColor="@color/transparent">-->
 
-                <!--                &lt;!&ndash; TabItem 不能设置 id &ndash;&gt;-->
-                <!--                <com.google.android.material.tabs.TabItem-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="match_parent"-->
-                <!--                    android:text="@string/tab_item_my" />-->
+            <!--                &lt;!&ndash; TabItem 不能设置 id &ndash;&gt;-->
+            <!--                <com.google.android.material.tabs.TabItem-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:text="@string/tab_item_my" />-->
 
-                <!--                <com.google.android.material.tabs.TabItem-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="match_parent"-->
-                <!--                    android:text="@string/tab_item_discovery" />-->
+            <!--                <com.google.android.material.tabs.TabItem-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:text="@string/tab_item_discovery" />-->
 
-                <!--                <com.google.android.material.tabs.TabItem-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="match_parent"-->
-                <!--                    android:text="@string/tab_item_villain" />-->
+            <!--                <com.google.android.material.tabs.TabItem-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:text="@string/tab_item_villain" />-->
 
-                <!--                <com.google.android.material.tabs.TabItem-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="match_parent"-->
-                <!--                    android:text="@string/tab_item_video" />-->
+            <!--                <com.google.android.material.tabs.TabItem-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:text="@string/tab_item_video" />-->
 
-            </com.google.android.material.tabs.TabLayout>
+            <!--    </com.google.android.material.tabs.TabLayout>-->
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 

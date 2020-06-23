@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:layout_height="?actionBarSize">
+
+    <TextView
+        android:id="@+id/tab1"
+        android:layout_width="@dimen/home_tab_w"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/tab_item_my"
+        android:textSize="@dimen/home_tab_text_size_normal" />
+
+    <TextView
+        android:id="@+id/tab2"
+        android:layout_width="@dimen/home_tab_w"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/tab_item_discovery"
+        android:textSize="@dimen/home_tab_text_size_normal" />
+
+    <TextView
+        android:id="@+id/tab3"
+        android:layout_width="@dimen/home_tab_w"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/tab_item_villain"
+        android:textSize="@dimen/home_tab_text_size_normal" />
+
+    <TextView
+        android:id="@+id/tab4"
+        android:layout_width="@dimen/home_tab_w"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/tab_item_video"
+        android:textSize="@dimen/home_tab_text_size_normal" />
+
+</LinearLayout>

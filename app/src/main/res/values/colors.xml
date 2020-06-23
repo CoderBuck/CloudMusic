@@ -11,7 +11,10 @@
     <color name="red_400">#EF5350</color>
     <color name="red_600">#e53935</color>
     <color name="grey_400">#BDBDBD</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_800">#424242</color>
     <color name="blue_600">#1E88E5</color>
+    <color name="black">#000000</color>
 
 
     <color name="label_red">#CCFB4849</color>
@@ -19,8 +22,8 @@
     <color name="label_text">#FFFFFF</color>
 
 
-    <color name="tab_select">@color/red_400</color>
-    <color name="tab_normal">@color/grey_400</color>
+    <color name="tab_select">@color/black</color>
+    <color name="tab_normal">@color/grey_600</color>
 
 
     <!-- test -->
