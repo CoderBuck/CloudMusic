@@ -30,7 +30,6 @@ class HomeActivity : AppCompatActivity() {
     private fun initView() {
         bind.apply {
             // drawer
-            drawerLayout.openDrawer(GravityCompat.START)
             menu.setOnClickListener {
                 val drawerOpen = drawerLayout.isDrawerOpen(GravityCompat.START)
                 if (drawerOpen) {
