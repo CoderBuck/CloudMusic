@@ -52,10 +52,11 @@ class BannerView @JvmOverloads constructor(
         adapter = BannerAdapter(context, emptyList())
         viewPager.adapter = adapter
         indicator.setViewPager(viewPager)
+
         val lifecycle = when (context) {
             is AppCompatActivity -> context.lifecycle
             is Fragment -> context.lifecycle
-            else -> throw RuntimeException("no lifecycle")
+            else -> null
         }
         autoScroller = AutoScroller(viewPager, lifecycle)
         autoScroller.isAutoScroll = true
@@ -78,7 +79,7 @@ class BannerView @JvmOverloads constructor(
         val imageHeight = imageWidth / 1080 * 420
         val bannerHeight = imageHeight + resources.getDimension(R.dimen.banner_item_padding) * 2
         val wms = MeasureSpec.makeMeasureSpec(bannerWidth.toInt(), MeasureSpec.EXACTLY)
-        val hms =MeasureSpec.makeMeasureSpec(bannerHeight.toInt(),MeasureSpec.EXACTLY)
+        val hms = MeasureSpec.makeMeasureSpec(bannerHeight.toInt(), MeasureSpec.EXACTLY)
         super.onMeasure(wms, hms)
     }
 
