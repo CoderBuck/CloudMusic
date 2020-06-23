@@ -58,45 +58,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!--<com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tabBackground="@color/transparent"
-                app:tabIndicatorHeight="0dp"
-                app:tabMinWidth="?actionBarSize"
-                app:tabPadding="0dp"
-                app:tabPaddingBottom="0dp"
-                app:tabPaddingEnd="0dp"
-                app:tabPaddingStart="0dp"
-                app:tabPaddingTop="0dp"
-                app:tabRippleColor="@color/transparent">-->
-
-            <!--                &lt;!&ndash; TabItem 不能设置 id &ndash;&gt;-->
-            <!--                <com.google.android.material.tabs.TabItem-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:text="@string/tab_item_my" />-->
-
-            <!--                <com.google.android.material.tabs.TabItem-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:text="@string/tab_item_discovery" />-->
-
-            <!--                <com.google.android.material.tabs.TabItem-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:text="@string/tab_item_villain" />-->
-
-            <!--                <com.google.android.material.tabs.TabItem-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:text="@string/tab_item_video" />-->
-
-            <!--    </com.google.android.material.tabs.TabLayout>-->
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 
