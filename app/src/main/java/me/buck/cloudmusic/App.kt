@@ -14,9 +14,5 @@ class App : Application() {
         Utils.init(this)
         Timber.plant(MyDebugTree())
         Config.statusBarHeight = BarUtils.getStatusBarHeight()
-        val screenDensity = resources.getDisplayMetrics()
-        Timber.d("screenDensity = $screenDensity")
-        Timber.d("screenDensity2 = ${ScreenUtils.getScreenDensityDpi()}")
-
     }
 }
