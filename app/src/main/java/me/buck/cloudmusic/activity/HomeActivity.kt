@@ -10,7 +10,7 @@ import me.buck.cloudmusic.Config
 import me.buck.cloudmusic.R
 import me.buck.cloudmusic.adapter.HomeViewPagerAdapter
 import me.buck.cloudmusic.databinding.ActivityHomeBinding
-import org.youma.util.contentView
+import me.buck.cloudmusic.util.contentView
 
 class HomeActivity : AppCompatActivity() {
 

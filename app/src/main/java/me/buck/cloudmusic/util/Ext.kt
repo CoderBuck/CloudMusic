@@ -1,4 +1,4 @@
-package org.youma.util
+package me.buck.cloudmusic.util
 
 import android.view.LayoutInflater
 import android.view.View
