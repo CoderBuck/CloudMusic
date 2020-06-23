@@ -1,7 +1,6 @@
 package me.buck.cloudmusic.activity
 
 import android.os.Bundle
-import android.os.Handler
 import android.view.View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 import android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +9,6 @@ import me.buck.cloudmusic.R
 import me.buck.cloudmusic.adapter.HomeViewPagerAdapter
 import me.buck.cloudmusic.databinding.ActivityHomeBinding
 import org.youma.util.contentView
-import timber.log.Timber
 
 class HomeActivity : AppCompatActivity() {
 
