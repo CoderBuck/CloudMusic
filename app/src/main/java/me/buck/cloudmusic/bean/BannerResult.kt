@@ -841,8 +841,11 @@ data class Banner(
     val targetId: Int,
     val targetType: Int,
     val titleColor: EmTitleColor,
-    val typeTitle: String,
-    val adDispatchJson: Any,
+    val typeTitle: String
+//    ,
+
+
+    /*val adDispatchJson: Any,
     val adLocation: Any,
     val adSource: Any,
     val adid: Any,
@@ -867,7 +870,7 @@ data class Banner(
     val scm: String,
     val showAdTag: Boolean,
     val showContext: Any,
-    val video: Any
+    val video: Any*/
 )
 
 data class Song(

@@ -61,6 +61,11 @@ dependencies {
     implementation 'me.relex:circleindicator:2.1.4'
     implementation 'com.kenilt.loopingviewpager:loopingviewpager:0.2.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
+    def latestFastAdapterRelease = "5.1.0"
+    implementation "com.mikepenz:fastadapter:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-binding:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-diff:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-utils:${latestFastAdapterRelease}"
 
 
     testImplementation 'junit:junit:4.13'

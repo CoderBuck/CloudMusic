@@ -2,11 +2,8 @@ package me.buck.cloudmusic.activity.test
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.blankj.utilcode.util.GsonUtils
 import me.buck.cloudmusic.R
 import me.buck.cloudmusic.bean.BannerResult
-import me.buck.cloudmusic.bean.em.EmTitleColor
-import me.buck.cloudmusic.bean.item.BannerItem
 import me.buck.cloudmusic.databinding.TestActivityBannerBinding
 import me.buck.cloudmusic.restapi.Api
 import me.buck.cloudmusic.util.delegate.contentView
@@ -32,17 +29,17 @@ class BannerTestActivity : AppCompatActivity() {
             override fun onFailure(call: Call<BannerResult?>, t: Throwable) {
                 Timber.e(t, "onFailure")
 
-                val bannerItems = listOf(
-                    BannerItem("", EmTitleColor.blue, "独家"),
-                    BannerItem("", EmTitleColor.blue, "独家"),
-                    BannerItem("", EmTitleColor.blue, "独家"),
-                    BannerItem("", EmTitleColor.blue, "独家"),
-                    BannerItem("", EmTitleColor.blue, "独家"),
-                    BannerItem("", EmTitleColor.blue, "独家"),
-                    BannerItem("", EmTitleColor.blue, "独家")
-                )
-
-                bind.banner.setData(bannerItems)
+//                val bannerItems = listOf(
+//                    BannerItem("", EmTitleColor.blue, "独家"),
+//                    BannerItem("", EmTitleColor.blue, "独家"),
+//                    BannerItem("", EmTitleColor.blue, "独家"),
+//                    BannerItem("", EmTitleColor.blue, "独家"),
+//                    BannerItem("", EmTitleColor.blue, "独家"),
+//                    BannerItem("", EmTitleColor.blue, "独家"),
+//                    BannerItem("", EmTitleColor.blue, "独家")
+//                )
+//
+//                bind.banner.setData(bannerItems)
 
             }
 
@@ -50,12 +47,7 @@ class BannerTestActivity : AppCompatActivity() {
                 Timber.d("onResponse")
                 val body = response.body()
                 if (body != null) {
-                    val json = GsonUtils.toJson(body)
-                    Timber.d("body = %s", json)
-                    val items = body.banners.map {
-                        BannerItem(it.pic, it.titleColor, it.typeTitle)
-                    }.toList()
-                    bind.banner.setData(items)
+                    bind.banner.setData(body.banners)
                 }
             }
         })

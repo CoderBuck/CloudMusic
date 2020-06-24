@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- fast_type -->
+    <item name="fast_type_banner" type="id" />
+    <item name="fast_type_func_buttons" type="id" />
+</resources>

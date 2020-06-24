@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.PagerAdapter
 import com.blankj.utilcode.util.ReflectUtils
@@ -15,7 +14,7 @@ import com.bumptech.glide.Glide
 import com.kenilt.loopingviewpager.scroller.AutoScroller
 import com.kenilt.loopingviewpager.widget.LoopingViewPager
 import me.buck.cloudmusic.R
-import me.buck.cloudmusic.bean.item.BannerItem
+import me.buck.cloudmusic.bean.Banner
 import me.buck.cloudmusic.tool.FixedSpeedScroller
 import me.relex.circleindicator.CircleIndicator
 
@@ -42,7 +41,7 @@ class BannerView @JvmOverloads constructor(
     val viewPager: LoopingViewPager
     val indicator: CircleIndicator
     val adapter: BannerAdapter
-    val autoScroller: AutoScroller
+//    val autoScroller: AutoScroller
 
 
     init {
@@ -58,15 +57,15 @@ class BannerView @JvmOverloads constructor(
             is Fragment -> context.lifecycle
             else -> null
         }
-        autoScroller = AutoScroller(viewPager, lifecycle)
-        autoScroller.isAutoScroll = true
+//        autoScroller = AutoScroller(viewPager, lifecycle)
+//        autoScroller.isAutoScroll = true
 
         // 修改 viewpager 滚动速度，慢一点
         // https://stackoverflow.com/a/9731345/6241791
         ReflectUtils.reflect(viewPager).field("mScroller", FixedSpeedScroller(context))
     }
 
-    fun setData(banners: List<BannerItem>) {
+    fun setData(banners: List<Banner>) {
         val adapter = BannerAdapter(context, banners)
         viewPager.adapter = adapter
         indicator.setViewPager(viewPager)
@@ -85,7 +84,7 @@ class BannerView @JvmOverloads constructor(
 
 }
 
-class BannerAdapter(val context: Context, val items: List<BannerItem>) : PagerAdapter() {
+class BannerAdapter(val context: Context, val items: List<Banner>) : PagerAdapter() {
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = View.inflate(context, R.layout.rvitem_banner, null)
