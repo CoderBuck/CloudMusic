@@ -1,5 +1,6 @@
 package me.buck.cloudmusic.restapi
 
+import me.buck.cloudmusic.Config
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -13,7 +14,7 @@ object Api {
 
     private val retrofit = Retrofit.Builder()
         .client(okHttpClient)
-        .baseUrl("http://192.168.0.101:3000")
+        .baseUrl(Config.REST_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
