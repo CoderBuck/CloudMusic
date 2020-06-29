@@ -6,4 +6,14 @@
     <string name="tab_item_discovery">发现</string>
     <string name="tab_item_villain">云村</string>
     <string name="tab_item_video">视频</string>
+
+    <!-- func button-->
+    <string name="func_button_1">每日推荐</string>
+    <string name="func_button_2">歌单</string>
+    <string name="func_button_3">排行榜</string>
+    <string name="func_button_4">电台</string>
+    <string name="func_button_5">直播</string>
+    <string name="func_button_6">火钳留名</string>
+    <string name="func_button_7">数字专辑</string>
+    <string name="func_button_8">畅聊</string>
 </resources>

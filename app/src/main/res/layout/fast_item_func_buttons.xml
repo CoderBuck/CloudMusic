@@ -1,92 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rv"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="100dp"
+    android:clipChildren="false"
     android:padding="@dimen/home_padding_h">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank" />
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/test_shape"
-            android:src="@drawable/t_dragonball_icn_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-
-
-    </LinearLayout>
-
-</HorizontalScrollView>
+</androidx.recyclerview.widget.RecyclerView>

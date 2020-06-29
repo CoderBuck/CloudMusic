@@ -15,4 +15,6 @@
     <dimen name="home_tab_text_size_select">18sp</dimen>
     <dimen name="home_padding_h">10dp</dimen>
 
+    <dimen name="func_button_space">26dp</dimen>
+
 </resources>
