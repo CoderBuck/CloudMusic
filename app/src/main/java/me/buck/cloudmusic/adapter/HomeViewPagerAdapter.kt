@@ -33,6 +33,7 @@ class HomeViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAV
             2 -> StringUtils.getString(R.string.tab_item_villain)
             3 -> StringUtils.getString(R.string.tab_item_video)
             else -> throw RuntimeException("fragment 数量超出")
+            //test
         }
     }
 }
